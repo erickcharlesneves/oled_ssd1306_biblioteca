@@ -16,7 +16,7 @@ Conforme as duas linhas de comunicação:
 >         
 >  - SCL (Serial Clock Line): Linha de clock, que sincroniza a comunicação, conectado ao **GPIO15**.
 
-Conforme está definido no arquivo ssd1306.c da pasta da biblioteca :
+Conforme está definido no arquivo [ssd1306.c](https://github.com/erickcharlesneves/oled_ssd1306_biblioteca/blob/main/ssd1306/ssd1306.c) da pasta da biblioteca :
 ```c
 if  defined(SSD1306_USE_I2C) //Verifica se o protocolo I2C está habilitado.
 
@@ -31,7 +31,7 @@ const  uint8_t  I2C_SCL_PIN  =  15;
 
 ### 1. Configuração e Setup
 
-**Arquivo: ssd1306_conf.h**
+**Arquivo: [ssd1306_conf.h](https://github.com/erickcharlesneves/oled_ssd1306_biblioteca/blob/main/ssd1306/ssd1306_conf.h)**
 
 -   **Seleção do barramento:**  
     Define se a comunicação será via I2C (ou SPI, se habilitado). No exemplo da biblioteca como dito anteriormente, está configurado para I2C.
@@ -181,7 +181,7 @@ Essas funções facilitam a implementação de modos de economia de energia ou d
 ----------
 ## Exemplos Práticos:
 
-No arquivo *main_testes_oled.c* podemos testar alguns exemplos práticos, para facilitar e agilizar note que a maioria das funções estarão comentadas com `//` ou `/* bloco a descomentar */` para testar individualmente preferencialmente ou se desejar em conjunto (se possível de acordo com os limites do display).
+No arquivo [*main_testes_oled.c*](https://github.com/erickcharlesneves/oled_ssd1306_biblioteca/blob/main/main_testes_oled.c) podemos testar alguns exemplos práticos, para facilitar e agilizar note que a maioria das funções estarão comentadas com `//` ou `/* bloco a descomentar */` para testar individualmente preferencialmente ou se desejar em conjunto (se possível de acordo com os limites do display).
 
  Para isso utilizando a extensão *Raspberry Pi Pico*:  
  1. Antes ative o modo ***BOOTSEL*** da *Raspberry Pi Pico* conectada ao PC digitando no terminal o comando: `picotool reboot -f -u` 
