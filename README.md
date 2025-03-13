@@ -183,6 +183,12 @@ Essas funções facilitam a implementação de modos de economia de energia ou d
 
 No arquivo *main_testes_oled.c* podemos testar alguns exemplos práticos, para facilitar e agilizar note que a maioria das funções estarão comentadas com `//` ou `/* bloco a descomentar */` para testar individualmente preferencialmente ou se desejar em conjunto (se possível de acordo com os limites do display).
 
+ Para isso utilizando a extensão *Raspberry Pi Pico*:  
+ 1. Antes ative o modo ***BOOTSEL*** da *Raspberry Pi Pico* conectada ao PC digitando no terminal o comando: `picotool reboot -f -u` 
+ 2. Ou pressionando e segurando o botão *BOOTSEL* e *Reset* durante 3 segundos. Isso coloca a placa em modo de armazenamento USB em massa.
+ 3. *Compile o projeto*
+ 4. *Rode o projeto(USB)* com a função desejada sem comentários.
+    
  **1. Bitmaps:**
 
 ```c
@@ -190,15 +196,17 @@ No arquivo *main_testes_oled.c* podemos testar alguns exemplos práticos, para f
 
 ssd1306_DrawBitmap(0, 0, virtuscc_bitmap, SSD1306_WIDTH, SSD1306_HEIGHT, White); 
 ```
-Bitmap de exemplo com a imagem do logo Virtus CC:
 
-e (antes da execução da próxima função lembre de comentar `//` novamente a função acima).
+![image](https://github.com/user-attachments/assets/78f93890-74aa-4bf4-94b8-1d20934a328f)
+
+
+e (antes da execução da próxima função lembre de comentar `//` novamente na função acima).
 ```c
 //ssd1306_DrawBitmap(0, 0, astronauta, SSD1306_WIDTH, SSD1306_HEIGHT, White);
 ```
-Bitmap de exemplo com a imagem do astronauta:
-  
+![image](https://github.com/user-attachments/assets/c97cd550-77de-46ec-bbb0-5a2becdb784e)
 
+  
 Imagens utilizadas redimensionadas também na pasta: *img bitmap sample*
 
 O bitmap foi gerado a partir do site:
@@ -230,7 +238,9 @@ ssd1306_DrawCircle(SSD1306_WIDTH - 20, SSD1306_HEIGHT - 20, 10, White);
 
 //ssd1306_FillCircle(SSD1306_WIDTH - 20, SSD1306_HEIGHT - 20, 10, White); // circulo preenchido
 ```
-Inserir imagem
+
+![image](https://github.com/user-attachments/assets/71a816df-ab8d-4429-aee9-6550feff1f0e)
+
 
 
  **3. Funções de Texto:**
@@ -243,9 +253,15 @@ ssd1306_SetCursor(1, 1); // Coloca o cursor na posição
 ssd1306_WriteStringWrapped("Um exemplo de texto com quebra automatica!\nE nova linha automaticamente!", Font_7x10, White);
 
 ```
+
+
+
+
+
 É uma função para escrever texto com quebra automática de linha (ou não se escolher a função sem `Wrapped`). Se o texto ultrapassar a largura do display, o cursor é reposicionado para a próxima linha. Além disso, interpreta o caractere de nova linha (`\n`).
 
-INSERIR IMG
+![image](https://github.com/user-attachments/assets/99f7a782-b916-4f41-bd3f-42ab1109e9bd)
+
 ______________
 Outro exemplo com texto longo:
 ```c
@@ -261,8 +277,9 @@ ssd1306_ScrollTextHorizontal(longText, Font_7x10, White, 10, 1);
 
 return  0;
 ```
-INSERIR IMG
 
+
+______________
  **Funções de Scroll (Rolagem):**
 ```c
 //=== Inicia scroll horizontalmente da tela, automáticamente, da página 0 até 7 com velocidade definida (0 a 7, onde 0 é mais rápido(terceiro número)) ===
@@ -279,8 +296,40 @@ ssd1306_DrawRectangle(0, 0, 127, 63, White);
 
 ssd1306_FillTriangle(10, 10, 50, 10, 30, 40, White); // triângulo preenchido
 ```
-IMG SCROLL com formas
 
 
+![image](https://github.com/user-attachments/assets/0f53ce02-c9cf-4db0-aba6-381b19f0ef6e)
 
+______________
+### Conclusão
+
+Em resumo, a presente biblioteca SSD1306 oferece:
+
+-   **Interface de baixo nível** para comunicação com o display via I2C (ou SPI, se configurado).
+-   **Inicialização completa** que configura todos os parâmetros do display conforme o datasheet.
+-   **Buffer de vídeo** para operações de desenho e atualização da tela.
+-   **Funções gráficas** (pixels, linhas, formas geométricas, arcos, círculos e retângulos) que possibilitam a criação de interfaces gráficas.
+-   **Funções de texto** para escrita e manipulação de strings com suporte a diferentes fontes e quebras automáticas.
+-   **Funções de scroll** tanto utilizando o hardware interno do display quanto implementando scroll de texto via software.
+-   **Configurações ajustáveis** por meio de um arquivo de configuração único, que melhora a portabilidade e a manutenção do código.
+
+_______________
+
+## License
+
+[MIT license](https://github.com/erickcharlesneves/ClassifyOperationalStatusZnoRNA/blob/main/LICENSE) 
+
+## Contribuições:
+
+Contribuições são sempre bem-vindas. Sinta-se à vontade para levantar novas questões, e abrir pull requests. Considere dar uma estrela e bifurcar este repositório!
+
+Se você tiver alguma dúvida sobre, não hesite em entrar em contato comigo no Gmail: [erick.cassiano@ee.ufcg.edu.br](mailto:erick.cassiano@ee.ufcg.edu.br) ou abrir um problema no GitHub.
+
+## Contributing:
+
+Contributions are always welcomed. Feel free to raise new issues, file new PRs. Consider giving it a star and fork this repo!
+
+If you have any question about this opinionated list, do not hesitate to contact me on Gmail: [erick.cassiano@ee.ufcg.edu.br](mailto:erick.cassiano@ee.ufcg.edu.br) or open an issue on GitHub.
+
+[![Linkedin](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/erick-charles-neves/)
 
