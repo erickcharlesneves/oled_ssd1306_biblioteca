@@ -207,13 +207,13 @@ e (antes da execução da próxima função lembre de comentar `//` novamente na
 ![image](https://github.com/user-attachments/assets/c97cd550-77de-46ec-bbb0-5a2becdb784e)
 
   
-Imagens utilizadas redimensionadas também na pasta: *img bitmap sample*
+Imagens utilizadas redimensionadas também na pasta: [*img bitmap sample*](https://github.com/erickcharlesneves/oled_ssd1306_biblioteca/tree/main/img%20bitmap%20sample)
 
 O bitmap foi gerado a partir do site:
 https://diyusthad.com/image-to-cpp-v2
 
 Com, Output Format Adafruit GFX Font: 
-Que estão na pasta da biblioteca modularizada para os bitmaps *ssd1306_bitmaps.c*
+Que estão na pasta da biblioteca modularizada para os bitmaps [*ssd1306_bitmaps.c*](https://github.com/erickcharlesneves/oled_ssd1306_biblioteca/blob/main/ssd1306/ssd1306_bitmaps.c)
 
  **2. **Algumas formas geométricas:****
 Essas funções formam a base para qualquer aplicação gráfica, permitindo desde a criação de gráficos simples até interfaces complexas.
