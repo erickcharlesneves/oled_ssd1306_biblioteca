@@ -27,7 +27,11 @@ const  uint8_t  I2C_SDA_PIN  =  14;
 const  uint8_t  I2C_SCL_PIN  =  15;
 ```
 ----------
-## Esta biblioteca fornece uma interface fácil de usar com diversas camadas e funcionalidades, grande parte foi acrescentada tomando como base a biblioteca do Gabriel: https://github.com/gabrielmdrss/Pico_SSD1306_Library esta dele que foi adaptada a partir da biblioteca que utilizamos no módulo anterior de periféricos (I2C) com STM32-F446RE: https://github.com/afiskon/stm32-ssd1306?tab=readme-ov-file
+## Esta biblioteca fornece uma interface fácil de usar com diversas camadas e funcionalidades.
+
+#### Iniciamente foi desenvolvida tomando como base a biblioteca do Gabriel: https://github.com/gabrielmdrss/Pico_SSD1306_Library esta dele que foi adaptada a partir da biblioteca que utilizamos no módulo anterior de periféricos (I2C) com STM32-F446RE: https://github.com/afiskon/stm32-ssd1306?tab=readme-ov-file
+
+## Funcionalidades:
 
 ### 1. Configuração e Setup
 
